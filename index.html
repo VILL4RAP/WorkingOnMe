@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@1,300&family=Roboto+Mono:wght@500&display=swap');
+    </style>
+    <title>CONVERSIONES</title>
+    <link rel="stylesheet" type="text/css" href = "visual.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="conversion.png" type="image/png">
+</head>
+<body>
+    <header>
+        <a href ="" class="Logo">
+            <img src="conversion.png" alt="Logo">
+            <h3 class="Nombre">VILL</h3>
+        </a>
+        <nav>
+            <a href="index.html" class="inicio">Inicio</a>
+            <a href="multimedia.html" class="multimedia">Multimedia</a>
+            <a href="contacto.html" class="contacto">Contacto</a>
+        </nav>
+    </header>
+    <h1>CONVERSIONES</h1>
+    <div>
+        <label for="opciones">¿Que deseas?:</label>
+        <select id="opciones">
+            <option value="1">Realizar Conversiónes</option>
+            <option value="2">Generar Ejemplos</option>
+        </select>
+    <div>
+    <p>las conversiones de unidades permiten expresar medidas en diferentes escalas o sistemas de medida, manteniendo el mismo valor numérico. Esto es esencial para comunicar y trabajar con datos en contextos diferentes o más comprensibles.</p>
+    </div>
+    </div>
+
+    <div id="conversionSeccion" style="display: none;">
+        <h2>EJERCICIOS DE:</h2>
+    <div>
+            <p2 id="TEMPERATURAS">TEMPERATURAS</p2>
+            <br>
+            <label for="opciones">Pasar:</label>
+            <input type="number" id="DigitarTemperatura" min="0">
+            <select id="opcionesTemperatura">
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+            </select>
+            <label for="opciones2">a:</label>
+            <select id="opciones2Temperatura">
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+                <option value="celsius">Celsius</option>
+            </select>
+            <button id="btnResultadoTemperatura" onclick="TEMPERATURAS_()">Calcular</button>
+            <p id="resultadoTemperatura"></p>
+    </div>
+
+    <div>
+            <p2 id="LONGITUD">LONGITUD</p2>
+            <br>
+            <label for="opciones">Pasar: </label>
+            <input type = "number" id = "DigitarLongitud" min ="0">
+            <select id="opcionesLongitud">
+                <option value="centimetros">Centimetros</option>
+                <option value="metros">Metros</option>
+                <option value="kilometros">Kilometros</option>
+            </select>
+            <label for="opciones2">a: </label>
+            <select id="opciones2Longitud">
+                <option value="metros">Metros</option>
+                <option value="kilometros">Kilometros</option>
+                <option value="centimetros">Centimetros</option>
+            </select>
+            <button id="btnResultadoLongitud" onclick="LONGITUD_()">Calcular</button>
+            <p id="resultadoLongitud"></p>
+    </div>
+
+    <div>
+            <p2 id="MASA">MASA</p2>
+            <br>
+            <label for="opciones">Pasar: </label>
+            <input type = "number" id = "DigitarMasa" min ="0">
+            <select id="opcionesMasa">
+                <option value="miligramos">Miligramos</option>
+                <option value="gramos">Gramos</option>
+                <option value="kilogramos">Kilogramos</option>
+            </select>
+            <label for="opciones2">a: </label>
+            <select id="opciones2Masa">
+                <option value="gramos">Gramos</option>
+                <option value="kilogramos">Kilogramos</option>
+                <option value="miligramos">Miligramos</option>
+            </select>
+            <button id="btnResultadoMasa" onclick="MASA_()">Calcular</button>
+            <p id="resultadoMasa"></p>
+    </div>
+
+    <div>
+            <p2 id="TIEMPO">TIEMPO</p2>
+            <br>
+            <label for="opciones">Pasar: </label>
+            <input type = "number" id = "DigitarTiempo" min ="0">
+            <select id="opcionesTiempo">
+                <option value="segundos">Segundos</option>
+                <option value="minutos">Minutos</option>
+                <option value="horas">Horas</option>
+            </select>
+            <label for="opciones2">a: </label>
+            <select id="opciones2Tiempo">
+                <option value="minutos">Minutos</option>
+                <option value="horas">Horas</option>
+                <option value="segundos">Segundos</option>
+            </select>
+            <button id="btnResultadoTiempo" onclick="TIEMPO_()">Calcular</button>
+            <p id="resultadoTiempo"></p>
+    </div>
+
+    <div>
+            <p2 id="VOLUMEN">VOLUMEN</p2>
+            <br>
+            <label for="opciones">Pasar: </label>
+            <input type = "number" id = "DigitarVolumen" min ="0">
+            <select id="opcionesVolumen">
+                <option value="mililitros">Mililitros</option>
+                <option value="litros">Litros</option>
+                <option value="galones">Galones</option>
+            </select>
+            <label for="opciones2">a: </label>
+            <select id="opciones2Volumen">
+                <option value="litros">Litros</option>
+                <option value="galones">Galones</option>
+                <option value="mililitros">Mililitros</option>
+            </select>
+            <button id="btnResultadoVolumen" onclick="VOLUMEN_()">Calcular</button>
+            <p id="resultadoVolumen"></p>
+    </div>
+    </div>
+
+
+
+    <div id="ejemplosSeccion" style="display: none;">
+            <br>
+            <button id="random">GENERAR</button>
+            <br>
+            <h2>EJEMPLOS DE:</h2>
+        
+    <div id="ejemploTemperatura">
+                <p2>TEMPERATURAS</p2>
+                <p id="resultadoEjemploTemperatura"></p>
+                <p id="explicacionEjemploTemperatura"></p>
+                <p id="textoExplicacionEjemploTemperatura"></p>
+    </div>
+    <br>
+        
+    <div id="ejemploLongitud">
+                <p2>LONGITUD</p2>
+                <p id="resultadoEjemploLongitud"></p>
+                <p id="explicacionEjemploLongitud"></p>
+                <p id="textoExplicacionEjemploLongitud"></p>
+    </div>
+    <br>
+        
+    <div id="ejemploMasa">
+                <p2>MASA</p2>
+                <p id="resultadoEjemploMasa"></p>
+                <p id="explicacionEjemploMasa"></p>
+                <p id="textoExplicacionEjemploMasa"></p>
+    </div>
+    <br>
+        
+    <div id="ejemploTiempo">
+                <p2>TIEMPO</p2>
+                <p id="resultadoEjemploTiempo"></p>
+                <p id="explicacionEjemploTiempo"></p>
+                <p id="textoExplicacionEjemploTiempo"></p>
+    </div>
+    <br>
+
+    <div id="ejemploVolumen">
+                <p2>VOLUMEN</p2>
+                <p id="resultadoEjemploVolumen"></p>
+                <p id="explicacionEjemploVolumen"></p>
+                <p id="textoExplicacionEjemploVolumen"></p>
+    </div>
+    </div>
+    <br>
+
+
+<script src="Conversiones.js"></script>
+
+<section id="caracteristicas">
+    <div class="container">
+    <ul>
+        <li>La creatividad es contagiosa, pásala. - Albert Einstein</li>
+    </ul>
+</div>
+</section>
+
+<footer>
+    <div class="containter">
+        <p>&copy; Vill 2023</p>
+    </div>
+</footer>
+
+</body>
+</html>
